@@ -1,10 +1,20 @@
 import React from 'react';
+import { Popover, Overlay, OverlayTrigger } from 'react-bootstrap';
 import { GoogleMapsLoader, GeoSearch, Marker } from 'react-instantsearch-dom-maps';
 const mapKey = process.env.REACT_APP_MAPS_API
 
+const popover = (hit) => (
+  <Popover id="popover-basic">
+    <Popover.Title as="h3">{hit.name}</Popover.Title>
+    <Popover.Content>
+      {hit.address}
+    </Popover.Content>
+  </Popover>
+);
+
 function FullMap() {
     return (
-    <div style={{ height: 500 }}>
+    <div style={{ height: 500 }} id="fullMapView">
         <GoogleMapsLoader apiKey={mapKey}>
         {google => (
           <GeoSearch
@@ -13,7 +23,11 @@ function FullMap() {
           >
             {({ hits }) => (
               <div>
-                {hits.map(hit => <Marker key={hit.objectID} hit={hit} />)}
+                {hits.map(hit => (
+                  <OverlayTrigger trigger="click" placement="right" overlay={popover({hit})}>
+                    <Marker key={hit.objectID} hit={hit} />
+                  </OverlayTrigger>
+                  ))}
               </div>
             )}
           </GeoSearch>
