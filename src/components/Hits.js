@@ -19,8 +19,7 @@ const Hits = ({ hits }) => {
                             postal_code={hit.postal_code}
                             geoloc={hit._geoloc}
                             
-                        />
-                       
+                        /> 
                     </Col>
                     <Col md={8} id="hitData">
                         <BusinessData 
