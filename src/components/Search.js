@@ -4,9 +4,9 @@ import { SearchBox } from 'react-instantsearch-dom';
 
 function Search() {
     return (
-        <Col md={11} id="searchBar">
+        <Col md={12}>
             <Row>
-                <SearchBox />
+                <SearchBox className="searchBox"/>
             </Row>
         </Col>
     );

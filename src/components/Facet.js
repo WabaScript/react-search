@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RefinementList } from 'react-instantsearch-dom';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Col, Card } from 'react-bootstrap';
 
 
 const Facet = ({ attribute }) => {
@@ -11,7 +11,7 @@ const Facet = ({ attribute }) => {
         <Col md={12} id="facet">
             <Card>
                 <Card.Header onClick={handleShow}>
-                    {attribute.charAt(0).toUpperCase() + attribute.slice(1)}
+                    <strong>{attribute.charAt(0).toUpperCase() + attribute.slice(1)}</strong>
                 </Card.Header>
                 {show &&
                 <Card.Body id="facetList">

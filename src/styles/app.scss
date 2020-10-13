@@ -54,28 +54,30 @@ $body-bg: #fff;
       
   }
 
-  #searchBox {
-    width: 100%;
-    border-radius: 8px;
-    background-color: #222222;
-    margin-bottom: 10px;
-  }
+  // .searchBox {
+  //   // width: 100%;
+  //   // margin-bottom: 10px;
+  //   // box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  // }
 
-  .ais-SearchBox {
+  .ais-SearchBox.searchBox {
     width: 100%;
-    padding: 10px;
-    margin-left: 20px;
-    margin-top: 3px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.19), 0 6px 6px rgba(0,0,0,0.23);
   }
   
+  .ais-SearchBox.facetSearch {
+    width: 100%;
+    padding: 1px;
+  }
   
   #hit {
       margin: 5px;
+      margin-bottom: 15px;
       padding: 5px;
       
   }
   #hit:hover {
-      box-shadow: 0 14px 28px rgba(255,255,255,0.25), 0 10px 10px rgba(255,255,255,0.22);
+      box-shadow: 0 14px 28px rgba(255, 255, 255, 0.19), 0 10px 10px rgba(255,255,255,0.22);
   }
   
   .hover-hit {

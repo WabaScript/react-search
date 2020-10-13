@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import React from 'react';
+import { Row, Col, Card } from 'react-bootstrap';
 import Map from './Map';
 import BusinessData from './BusinessData';
 
 const Hits = ({ hits }) => {
     return (
-        <Row id="hits">
+        <>
             {hits.map(hit => (
-                <>
+                <Card md={12} id="hit" key={hit.objectID} >
+                <Row>
                     <Col md={3} id="hitMap">
                         <Map 
-                            key={hit.objectID}
                             business_id={hit.business_id}
                             name={hit.name}
                             address={hit.address}
@@ -23,7 +23,6 @@ const Hits = ({ hits }) => {
                     </Col>
                     <Col md={8} id="hitData">
                         <BusinessData 
-                            key={hit.objectID} 
                             name={hit.name}
                             address={hit.address}
                             city={hit.city}
@@ -36,9 +35,11 @@ const Hits = ({ hits }) => {
                             business_id={hit.business_id}
                         />
                     </Col>
-                </>
+                    </Row>
+                    </Card>
+                
             ))}
-        </Row>
+    </>
     );
   }
   

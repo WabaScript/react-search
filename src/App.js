@@ -1,12 +1,12 @@
 import React from 'react';
 import SearchClient from './utils/SearchClient'
-import { InstantSearch } from 'react-instantsearch-dom';
+import { InstantSearch, Pagination, SortBy } from 'react-instantsearch-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ReactComponent as YelpLogo } from './img/Yelp_Logo.svg';
 import FacetsContainer from './components/FacetsContainer'
 import HitsContainer from './components/HitsContainer'
 import Search from './components/Search'
-import SortDropwDown from './components/SortDropDown';
+import FullMap from './components/FullMap'
 
 function App() {
   return (
@@ -30,7 +30,12 @@ function App() {
             <Search />
           </Col>
           <Col md={4} id="searchSort">
-            <SortDropwDown/>
+            <SortBy 
+              defaultRefinement="yelp-businesses-test"
+              items={[
+                { value: 'yelp-businesses-test', label: 'Default' }
+              ]}
+            />
           </Col>
         </Row>
         
@@ -39,9 +44,21 @@ function App() {
             <FacetsContainer/>
           </Col>
           <Col md={9} id="hitsContainer">
-            <HitsContainer/>
+            <Row>
+              <HitsContainer/>
+            </Row>
+            <Col md={12} id="pagination">
+              <Pagination />
+            </Col>
           </Col>
         </Row>
+
+        <Row>
+          <Col md={12} id="mapView">
+            <FullMap />
+          </Col>
+        </Row>
+
       </InstantSearch>
     </Container>
   );
