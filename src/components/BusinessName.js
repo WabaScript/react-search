@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import {Button, Card, Modal} from 'react-bootstrap';
-import ReactStars from 'react-rating-stars-component';
-import moment from 'moment';
 
 const BusinessName = ({props}) => {
     const [show, setShow] = useState(false);

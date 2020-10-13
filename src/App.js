@@ -48,10 +48,10 @@ function App() {
         </Row>
         
         <Row id="facetsAndHits">
-          <Col md={4} sm={6} xs={6} className="d-none d-sm-block d-md-block"id="facetContainer">
+          <Col xl={3} lg={4} md={4} sm={6} xs={6} className="d-none d-sm-block d-md-block"id="facetContainer">
             <FacetsContainer/>
           </Col>
-          <Col md={8} sm={6} xs={12} id="hitsContainer">
+          <Col xl={9} lg={8} md={8} sm={6} xs={12} id="hitsContainer">
             <Row>
               <HitsContainer/>
             </Row>
