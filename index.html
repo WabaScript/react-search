@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.6.2";
+        var appId = "DNHR48MVJQ";
+        var apiKey = "002adb870e1771fb29baa60b60af2758";
+
+        !function (e, a, t, n, s, i, c) {
+            e.AlgoliaAnalyticsObject = s, e[s] = e[s] || function () {
+                (e[s].queue = e[s].queue || []).push(arguments)
+            }, i = a.createElement(t), c = a.getElementsByTagName(t)[0],
+                i.async = 1, i.src = n, c.parentNode.insertBefore(i, c)
+        }(window, document, "script", ALGOLIA_INSIGHTS_SRC, "aa");
+
+
+        // Initialize library
+        aa('init', {
+            appId: appId,
+            apiKey: apiKey
+        });
+    </script>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+    />
+    <!-- ALGOLIA CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" rel="stylesheet"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
+    <title>Yelp Search | Powered by Algolia</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
+
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
+
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
+<footer class="mt-auto">
+    <div class="container">
+        <small>&copy; Richard Wahba 2020. For Sepehr, Sevan, Monica and friends at Algolia.</small>
+    </div>
+</footer>
+</body>
+</html>
