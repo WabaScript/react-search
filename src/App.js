@@ -22,14 +22,14 @@ function App() {
           </Col>
         </Row>
 
-        <Row id="searchRow">
-          <Col md={2} id="searchRowImg">
+        <Row sm={4} xs={1} id="searchRow">
+          <Col sm={12} md={2} className="d-none d-sm-block d-md-block" id="searchRowImg">
             <a href="/"><YelpLogo/></a>
           </Col>
-          <Col md={6} id="searchBox">
+          <Col md={6} xs={6} id="searchBox">
             <Search />
           </Col>
-          <Col md={4} id="searchSort">
+          <Col md={4} xs={6} id="searchSort">
             <SortBy 
               defaultRefinement="yelp-businesses-test"
               items={[
@@ -40,21 +40,21 @@ function App() {
         </Row>
         
         <Row id="facetsAndHits">
-          <Col md={3} id="facetContainer">
+          <Col md={4} sm={6} xs={6} className="d-none d-sm-block d-md-block"id="facetContainer">
             <FacetsContainer/>
           </Col>
-          <Col md={9} id="hitsContainer">
+          <Col md={8} sm={6} xs={12} id="hitsContainer">
             <Row>
               <HitsContainer/>
             </Row>
-            <Col md={12} id="pagination">
+            <Col md={12} xs={12} id="pagination">
               <Pagination />
             </Col>
           </Col>
         </Row>
 
         <Row>
-          <Col md={12} id="mapView">
+          <Col lg={12} md={12} id="mapView">
             <FullMap />
           </Col>
         </Row>
