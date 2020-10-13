@@ -1,13 +1,14 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 import { SearchBox } from 'react-instantsearch-dom';
 
 function Search() {
     return (
-        <div class="col-md-11" id="searchBar">
-            <div class="row">
+        <Col md={11} id="searchBar">
+            <Row>
                 <SearchBox />
-            </div>
-        </div>
+            </Row>
+        </Col>
     );
   }
   

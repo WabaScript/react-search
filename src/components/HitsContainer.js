@@ -8,9 +8,11 @@ const HitsContainer = () => {
     const CustomHits = connectHits(Hits);
     
     return (
-        <Row id="hits">
-            <CustomHits />
-        </Row>
+        <Container >
+            <Row id="hits">
+                <CustomHits />
+            </Row>
+        </Container>
     );
   }
   

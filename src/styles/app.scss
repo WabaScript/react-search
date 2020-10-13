@@ -35,6 +35,12 @@ $body-bg: #fff;
   #facet {
       margin-bottom: 10px;
   }
+
+  #facetList {
+    margin-right: 15px;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
   
   footer {
       padding: 10px;
@@ -57,8 +63,9 @@ $body-bg: #fff;
 
   .ais-SearchBox {
     width: 100%;
+    padding: 10px;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 3px;
   }
   
   

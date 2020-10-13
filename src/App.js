@@ -3,7 +3,7 @@ import SearchClient from './utils/SearchClient'
 import { InstantSearch } from 'react-instantsearch-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ReactComponent as YelpLogo } from './img/Yelp_Logo.svg';
-import Facet from './components/Facet'
+import FacetsContainer from './components/FacetsContainer'
 import HitsContainer from './components/HitsContainer'
 import Search from './components/Search'
 import SortDropwDown from './components/SortDropDown';
@@ -35,10 +35,10 @@ function App() {
         </Row>
         
         <Row id="facetsAndHits">
-          <Col md={12} id="facetContainer">
-            <Facet/>
+          <Col md={3} id="facetContainer">
+            <FacetsContainer/>
           </Col>
-          <Col md={11} id="hitsContainer">
+          <Col md={9} id="hitsContainer">
             <HitsContainer/>
           </Col>
         </Row>

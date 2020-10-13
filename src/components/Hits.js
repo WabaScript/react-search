@@ -8,7 +8,7 @@ const Hits = ({ hits }) => {
         <Row id="hits">
             {hits.map(hit => (
                 <>
-                    <Col md={4} id="hitMap">
+                    <Col md={3} id="hitMap">
                         <Map 
                             key={hit.objectID}
                             business_id={hit.business_id}

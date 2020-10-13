@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { RefinementList } from 'react-instantsearch-dom';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
-function Facet() {
+
+const Facet = ({ attribute }) => {
+    const [show, setShow] = useState(true);
+    const handleShow = () => setShow(!show);
+
     return (
-        <div className="col-md-3" id="facetContainer">
-            <div className="card bg-default" id="facet">
-                <h5 className="card-header">
-                    Facet Title
-                </h5>
-                <div className="card-body" id="facetList">
-                    <p className="card-text">
-                        Facet Content
-                    </p>
-                </div>
-                <div className="card-footer">
-                </div>
-            </div>
-        </div>
+        <Col md={12} id="facet">
+            <Card>
+                <Card.Header onClick={handleShow}>
+                    {attribute.charAt(0).toUpperCase() + attribute.slice(1)}
+                </Card.Header>
+                {show &&
+                <Card.Body id="facetList">
+                    <RefinementList attribute={attribute} searchable={true} showMore={true}/>
+                </Card.Body> 
+                }
+                <Card.Footer />
+            </Card>
+        </Col>
     );
-  }
-  
+}
 export default Facet;
