@@ -1,16 +1,16 @@
 import React from 'react';
 import { Container, Col } from 'react-bootstrap';
-import Hits from './Hits';
-
-import { connectHits } from 'react-instantsearch-dom';
+import Hit from './Hit';
+import { Hits } from 'react-instantsearch-dom';
+import { connectHitInsights } from 'react-instantsearch-dom';
 
 const HitsContainer = () => {
-    const CustomHits = connectHits(Hits);
+    const HitWithInsights = connectHitInsights(window.aa)(Hit);
     
     return (
         <Container>
             <Col md={11} >
-                <CustomHits /> 
+                <Hits hitComponent={HitWithInsights} />
             </Col>
         </Container>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchClient from './utils/SearchClient'
-import { InstantSearch, Pagination, SortBy } from 'react-instantsearch-dom';
+import { InstantSearch, Pagination, SortBy, Configure } from 'react-instantsearch-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ReactComponent as YelpLogo } from './img/Yelp_Logo.svg';
 import FacetsContainer from './components/FacetsContainer'
@@ -16,6 +16,14 @@ function App() {
         indexName="yelp-businesses-test"
         searchClient={SearchClient}
       >
+      <Configure
+          hitsPerPage={8}
+          analytics={true}
+          clickAnalytics={true}
+          enablePersonalization={true}
+          aroundLatLngViaIP={true}
+          distinct
+      />
         <Row id="title">
           <Col md={12}>
             <h1>	Yelp Search <small>powered by Algolia</small></h1>
