@@ -1,0 +1,83 @@
+// Override default variables before the import
+$body-bg: #fff;
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+.background-img {
+    position: relative;
+    width: 100%;
+    background: url("../img/bg-pattern.png"), rgb(0, 173, 255);
+    background: url("../img/bg-pattern.png"), linear-gradient(to left, #2590ba, #a717b8);
+  }
+  
+  @media (min-width: 992px) {
+    header.background-img {
+      height: 100vh;
+      min-height: 775px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    header.background-img .header-content {
+      margin-bottom: 0;
+      text-align: left;
+    }
+    header.background-img .header-content h1 {
+      font-size: 50px;
+    }
+    header.background-img .device-container {
+      max-width: 325px;
+    }
+  }
+  
+  #main {
+      padding-bottom: 25px;
+  }
+  
+  #facet {
+      margin-bottom: 10px;
+  }
+  
+  footer {
+      padding: 10px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.3);
+      background-color: #222222;
+  }
+  
+  #searchRowImg {
+      margin-bottom: 10px;
+      
+  }
+
+  #searchBox {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #222222;
+    margin-bottom: 10px;
+  }
+
+  .ais-SearchBox {
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  
+  #hit {
+      margin: 5px;
+      padding: 5px;
+      
+  }
+  #hit:hover {
+      box-shadow: 0 14px 28px rgba(255,255,255,0.25), 0 10px 10px rgba(255,255,255,0.22);
+  }
+  
+  .hover-hit {
+      color: blue;
+  }
+  
+  .fas.fa-star {
+      color: gold;
+      text-shadow: 0 0 1px #000
+  }
+  
+  
