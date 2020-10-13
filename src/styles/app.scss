@@ -2,6 +2,11 @@
 $body-bg: #fff;
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+
+body {
+  font-weight: 600;
+}
+
 .background-img {
     position: relative;
     width: 100%;
