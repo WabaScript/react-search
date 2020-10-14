@@ -9,6 +9,7 @@ I'm new to search engines, and there are a lot of concepts I'm not educated on. 
 I'm also struggling with understanding what types of metrics would be useful to include in the "Custom Ranking." 
 
 Cheers,
+<br>
 George
 
 #### Response 1:
@@ -35,7 +36,8 @@ In our example, if we see that iPhone X cases sell the most, we may see value in
 
 I hope this is helpful and I’d love to learn more about your business and how you can enable Algolia to provide your users with a powerful search experience. 
 
-Thank You, 
+Thank You,
+<br>
 Ricky
 
 ---
@@ -45,6 +47,7 @@ Hello,
 Sorry to give you the kind of feedback that I know you do not want to hear, but I really hate the new dashboard design. Clearing and deleting indexes are now several clicks away. I am needing to use these features while iterating, so this is inconvenient.
 
 Regards,
+<br>
 Matt
 
 #### Response 2:
@@ -57,6 +60,7 @@ While the dashboard UI has changed, the API still gives you the ability to delet
 In the meantime, I will certainly go ahead and share your feedback with our product teams. Please do not hesitate to reach and out and share any additional feedback and concerns.
 
 Thank You,
+<br>
 Ricky
 
 
@@ -67,6 +71,7 @@ Hi,
 I'm looking to integrate Algolia in my website. Will this be a lot of development work for me? What's the high level process look like?
 
 Regards,
+<br>
 Leo
 
 #### Response 3:
@@ -88,5 +93,6 @@ At a high level, the implementation process can be broken down into four steps:
 I’d love to personalize this experience for you as well, we can hop on a call and we can quickly spin up a solution together, let me know what your thoughts are!
 
 Thank You,
+<br>
 Ricky 
 
