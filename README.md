@@ -12,7 +12,6 @@ The list goes on, and the search results are fine tuned to ensure relevant resul
 
 Click tracking analytics are also leveraged to achieve the same result, shooting an insights update up to Algolia whenever a business is viewed for more detail as well as when a user looks at the map for an individual business. This data is invaluable in determining which search results are relevant to the user in order to promote them in future searches. Adding such events to the Algolia strategy will allow Yelp Search to promote such results. Ranking and sorting will also incorporate businesses with higher star ratings in the order of search results.
 
-*Before running locally, contact for API Keys!
 To run Yelp Search locally: 
 1. Clone this repo
 2. Install all dependencies by running:
@@ -23,3 +22,4 @@ yarn
 ```bash
 npm start
 ```
+*To run locally, you will need to contact me for API Keys!
