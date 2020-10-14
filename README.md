@@ -1,5 +1,4 @@
 # Yelp Search
----
 [Live Demo Available Here](https://determined-hermann-aefa99.netlify.app/)
 ---
 
