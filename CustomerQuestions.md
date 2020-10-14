@@ -1,5 +1,4 @@
 # Customer Questions
-### Question 1
 #### Customer Question 1:
 Hello,
 
@@ -40,7 +39,6 @@ Thank You,
 Ricky
 
 ---
-### Question 2:
 #### Customer Question 2:
 Hello,
 
@@ -63,7 +61,7 @@ Ricky
 
 
 ---
-### Question 3:
+#### Customer Question 3:
 Hi,
 
 I'm looking to integrate Algolia in my website. Will this be a lot of development work for me? What's the high level process look like?
@@ -76,7 +74,7 @@ Hi Leo!
 
 I’m happy to hear you have begun looking into Algolia! Integrating Algolia’s search will not only help grow your business, but shape it for success in the process. Algolia provides the software and tools to help you implement efficient, flexible, and insightful search on your sites and applications without the need to hire hundreds of developers. Algolia works right out of the box and can enable your website with a powerful search experience in minutes. Should you want to dive deeper and make customizations, you can! Algolia makes it easy to jump in and access our entire API. 
     
-    At a high level, the implementation process can be broken down into four steps:
+At a high level, the implementation process can be broken down into four steps:
 1.	Choose your dataset.
 2.	Push your data to Algolia either through the dashboard or in a few lines of code.
 3.	Configure the index with searchable attributes, categorical filters, and more.
@@ -84,6 +82,7 @@ I’m happy to hear you have begun looking into Algolia! Integrating Algolia’s
 	I’m also including some resources below for you to check out, there’s a 45 second overview video and a really awesome interactive tutorial to see how easy Algolia is to set up and see it in action.
 
 [Algolia in 45 Seconds](https://www.youtube.com/watch?v=IYY5RM1sBC0&feature=emb_logo)
+<br>
 [Interactive Tutorial](https://www.algolia.com/doc/onboarding/#/pick-dataset)
 
 I’d love to personalize this experience for you as well, we can hop on a call and we can quickly spin up a solution together, let me know what your thoughts are!
