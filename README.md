@@ -1,4 +1,7 @@
 # Yelp Search
+---
+[Live Demo Available Here](https://determined-hermann-aefa99.netlify.app/)
+---
 
 Welcome to Yelp Search, a web application that provides quick and easy access to over 209,000 Yelp Businesses records. Through Yelp Search, users have the ability to search through a subset of business listed on Yelp with the help of Algolia's powerful search engine. The businesses that appear on Yelp Search are automatically ranked and filtered to cater to the results that users are looking for. Aside from business name, users will be able to see business addresses (and even map the location on a Google Map), customer star ratings, business hours (along with a friendly message indicating whether the business is open on the given day or not), facet and filter by business category and/or city, and see all business locations on a larger map that encompasses the locations of all displayed search results. 
 
