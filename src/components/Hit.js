@@ -4,7 +4,7 @@ import BusinessData from "./BusinessData";
 
 const Hit = ({hit, insights}) => {
     return (
-        <Card md={12} id="hit" key={hit.objectID}>
+        <Card md={6} id="hit" className="h-100" key={hit.objectID}>
             <BusinessData
                 name={hit.name}
                 address={hit.address}

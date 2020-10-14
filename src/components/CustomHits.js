@@ -1,15 +1,19 @@
 import React from 'react';
+import { Col } from 'react-bootstrap';
 import { connectHits, connectHitInsights } from 'react-instantsearch-dom';
 import Hit from "./Hit"
   
 const HitWithInsights = connectHitInsights(window.aa)(Hit);
   
   const Hits = ({ hits }) => (
-    <div>
+    <>
+      {/* Utilize Insights for click tracking */}
       {hits.map(hit => (
-        <HitWithInsights key={hit.objectID} hit={hit} />
+        <Col md={6} id="hitDiv" key={hit.objectID}>
+          <HitWithInsights hit={hit} />
+        </Col>
       ))}
-    </div>
+    </>
   );
   
   const CustomHits = connectHits(Hits);

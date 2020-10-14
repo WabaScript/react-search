@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import {Button, Card, Modal} from 'react-bootstrap';
+import {Button, Modal} from 'react-bootstrap';
 
 const BusinessName = ({props}) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const {key, name, address, city, state, postal_code, stars, hours, categories, attributes, business_id, insights} = props;
+    const { name, address, city, state, postal_code, categories, insights} = props;
 
     return (
         <>
@@ -24,7 +24,7 @@ const BusinessName = ({props}) => {
                     <br/>
                     {city} {state} {postal_code}
                     <br/>
-                    {categories}
+                    {categorySplit(categories)}
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
@@ -34,6 +34,10 @@ const BusinessName = ({props}) => {
             </Modal>
         </>
     );
+}
+
+function categorySplit(categories) {
+    return categories.map(x => (x + " "))
 }
 
 export default BusinessName;

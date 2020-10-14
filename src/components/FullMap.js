@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popover, Overlay, OverlayTrigger } from 'react-bootstrap';
+import { Popover, OverlayTrigger } from 'react-bootstrap';
 import { GoogleMapsLoader, GeoSearch, Marker } from 'react-instantsearch-dom-maps';
 const mapKey = process.env.REACT_APP_MAPS_API
 

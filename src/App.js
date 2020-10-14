@@ -1,70 +1,73 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SearchClient from './utils/SearchClient'
-import { InstantSearch, Pagination, SortBy, Configure } from 'react-instantsearch-dom';
+import { InstantSearch, Pagination, Configure } from 'react-instantsearch-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ReactComponent as YelpLogo } from './img/Yelp_Logo.svg';
 import FacetsContainer from './components/FacetsContainer'
 import HitsContainer from './components/HitsContainer'
 import Search from './components/Search'
 import FullMap from './components/FullMap'
+import { FaAlgolia } from 'react-icons/fa';
+import { BiMap } from "react-icons/bi";
 
 function App() {
+  const [mapDisplay, setMapDisplay] = useState(false);
+  const handleShow = () => setMapDisplay(!mapDisplay);
+
   return (
     <Container fluid id="main" className="background-img">
-      {/* InstantSearch Will Power Entire Application */}
+        {/* InstantSearch Will Power Entire Application */}
       <InstantSearch
         indexName="yelp-businesses-test"
         searchClient={SearchClient}
       >
+        {/* Power search even further with analytics, geolocation & more */}
       <Configure
-          hitsPerPage={8}
+          hitsPerPage={10}
           analytics={true}
           clickAnalytics={true}
           enablePersonalization={true}
           aroundLatLngViaIP={true}
           distinct
       />
-        <Row id="title">
-          <Col md={12}>
-            <h1>	Yelp Search <small>powered by Algolia</small></h1>
+          {/* Header */}
+        <Row>
+          <Col xs={2} sm={2} md={2} id="logoImg">
+            <a href="/"><YelpLogo/></a> 
+          </Col>
+          <Col xs={10} sm={10} md={10} className="d-none d-sm-none d-md-block" id="algoliaIcon">
+            <FaAlgolia size={"3em"} id="title"/>
           </Col>
         </Row>
-
-        <Row sm={4} xs={1} id="searchRow">
-          <Col sm={12} md={2} className="d-none d-sm-block d-md-block" id="searchRowImg">
-            <a href="/"><YelpLogo/></a>
-          </Col>
-          <Col md={6} xs={6} id="searchBox">
+          {/* Search */}
+        <Row  id="searchRow">
+          <Col xs={11} sm={11} md={11} lg={11}>
             <Search />
           </Col>
-          <Col md={4} xs={6} id="searchSort">
-            <SortBy 
-              defaultRefinement="yelp-businesses-test"
-              items={[
-                { value: 'yelp-businesses-test', label: 'Default' }
-              ]}
-            />
+          <Col md={1} sm={1} xs={1}>
+            <BiMap id="biMap" onClick={handleShow}/>
           </Col>
         </Row>
-        
+          {/* Facets */}
         <Row id="facetsAndHits">
           <Col xl={3} lg={4} md={4} sm={6} xs={6} className="d-none d-sm-block d-md-block"id="facetContainer">
             <FacetsContainer/>
           </Col>
+            {/* Ability to toggle default display and map view */}
+          {!mapDisplay ?
           <Col xl={9} lg={8} md={8} sm={6} xs={12} id="hitsContainer">
             <Row>
               <HitsContainer/>
             </Row>
-            <Col md={12} xs={12} id="pagination">
+            <Col lg={12} md={12} sm={12} xs={12} id="pagination">
               <Pagination />
             </Col>
           </Col>
-        </Row>
-
-        <Row>
-          <Col lg={12} md={12} id="mapView">
+        :
+          <Col lg={8} md={8} id="mapView">
             <FullMap />
           </Col>
+        }
         </Row>
 
       </InstantSearch>
@@ -73,3 +76,10 @@ function App() {
 }
 
 export default App;
+
+// {/* <SortBy 
+//   defaultRefinement="yelp-businesses-test"
+//   items={[
+//     { value: 'yelp-businesses-test', label: 'Default' }
+//   ]}
+// /> */}
