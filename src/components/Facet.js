@@ -4,16 +4,16 @@ import { Col, Card } from 'react-bootstrap';
 
 
 const Facet = ({ attribute }) => {
-    const [show, setShow] = useState(true);
-    const handleShow = () => setShow(!show);
+    const [facetShow, setFacetShow] = useState(true);
+    const handleFacetShow = () => setFacetShow(!facetShow);
 
     return (
         <Col md={12} id="facet">
             <Card>
-                <Card.Header onClick={handleShow}>
+                <Card.Header onClick={handleFacetShow}>
                     <strong>{attribute.charAt(0).toUpperCase() + attribute.slice(1)}</strong>
                 </Card.Header>
-                {show &&
+                {facetShow &&
                 <Card.Body id="facetList">
                     <RefinementList attribute={attribute} searchable={true} showMore={true}/>
                 </Card.Body> 

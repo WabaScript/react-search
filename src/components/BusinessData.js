@@ -3,6 +3,7 @@ import { Card } from 'react-bootstrap';
 import ReactStars from 'react-rating-stars-component';
 import BusinessName from "./BusinessName";
 import moment from 'moment';
+import Map from "./Map";
 
 const BusinessData = (props) => {
     // {key, name, address, city, state, postal_code, stars, hours, categories, attributes, business_id }
@@ -10,7 +11,6 @@ const BusinessData = (props) => {
     return (
         <Card id="hitInfoContainer">
           <div id="hitInfo">
-              {/* <a target="_blank" href={`https://www.yelp.com/biz/${business_id}`} rel="noopener noreferrer" /> */}
             <BusinessName props={props} />
             {address}
             <br/>
@@ -25,6 +25,9 @@ const BusinessData = (props) => {
               activeColor="#ffd700"
             />
             {isOpenToday(hours) ? `Today's hours: ${getHoursFromObject(hours)}` : `Sorry, ${name} is not open today.`}
+            <br/>
+            <Map props={props} />
+            <br/>
           </div>
         </Card>
     );
@@ -62,5 +65,26 @@ function getHoursFromObject(hours) {
         return open.format("hh:mm A") + " - " + close.format("hh:mm A");
     }
 }
+
+// function getIconList() {
+    
+//     let icons = {};
+//     const attributeKeys = [
+//         'HasTV', 'WheelchairAccessible', 'RestaurantsPriceRange2', 'OutdoorSeating', 'BusinessAcceptsCreditCards',
+//         'Alcohol', 'GoodForKids', 'BusinessParking', 'BikeParking', 'WiFi', 'HappyHour', 'DogsAllowed',
+//     ]
+//     const iconElements = [
+//         <i className="fas fa-tv" />, <i className="fab fa-accessible-icon" />, <i className="fas fa-dollar-sign" />,
+//         <i className="fas fa-cloud-sun" />, <i className="far fa-credit-card" />, <i className="fas fa-cocktail" />,
+//         <i className="fas fa-baby" />, <i className="fas fa-parking" />, <i className="fas fa-bicycle" />,
+//         <i className="fas fa-wifi" />, <i className="fas fa-glass-cheers" />, <i className="fas fa-paw" />
+//     ]
+
+//     for (let i = 0; i < attributeKeys.length; i++) {
+//         icons[attributeKeys[i]] = iconElements[i];
+//     }
+
+//     return icons;
+// }
   
 export default BusinessData;

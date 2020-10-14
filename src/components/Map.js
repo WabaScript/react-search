@@ -1,43 +1,53 @@
 import React, { useState } from 'react';
-import { Modal, Button, Card } from 'react-bootstrap';
-import GoogleMapReact from 'google-map-react';
+import { Modal, Button } from 'react-bootstrap';
+import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import GoogleMap from 'google-map-react';
 
-const Map = ({key, name, address, city, state, postal_code, geoloc, business_id }) => {
-    const mapKey = process.env.REACT_APP_MAPS_API
+const Map = ({ props }) => {
+    const { key, name, address, city, state, postal_code, geoloc, business_id, insights } = props;
+    const mapKey = process.env.REACT_APP_MAPS_API;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const center = {lat: geoloc["lat"], lng: geoloc["lng"]}
+    const center = {lat: geoloc["lat"], lng: geoloc["lng"]};
+    const Marker = () => <FaMapMarkerAlt />;
   
     return (
           <>
-          <Button variant="primary" onClick={handleShow}>
-            {/* <GoogleMapReact
-              bootstrapURLKeys={{ key: mapKey }}
-              defaultCenter={center}
-              defaultZoom={11}
-            >
-              <Card
-                lat={geoloc["lat"]}
-                lng={geoloc["lng"]}
-                text="My Marker"
-              />
-            </GoogleMapReact> */}
-            Open Map!
-          </Button>
-      
+            <FaMapMarkedAlt onClick={handleShow} className="map-icon" style={{marginLeft: 'auto'}}/>
+
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>{address}, {state}</Modal.Title>
+                <Modal.Title>{name}</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Insert Google Map API using coords:
-                <br/>
-                Lattitude: {geoloc["lat"]}
-                <br/>
-                Longitude: {geoloc["lng"]}
+              <Modal.Body>
+                {address}, {state}
+                <br/><br/>
+                <div style={{ height: '50vh', width: '100%' }}>
+                  <GoogleMap
+                      bootstrapURLKeys={{ key: mapKey }}
+                      defaultCenter={center}
+                      defaultZoom={14}
+                    >
+                      <Marker
+                          lat={geoloc['lat']}
+                          lng={geoloc['lng']}
+                      />
+                    </GoogleMap>
+                </div>
               </Modal.Body>
               <Modal.Footer>
+                <a target="_blank" href={`https://www.yelp.com/biz/${business_id}`} rel="noopener noreferrer" >
+                <Button variant="primary" onClick={() => {
+                  handleClose();
+                  insights('clickedObjectIDsAfterSearch', {
+                      eventName: `Went to ${name}'s Yelp Business Page`
+                  })
+                }}>
+                  See more about {name} on Yelp!
+                </Button>
+                </a>
                 <Button variant="secondary" onClick={handleClose}>
                   Close
                 </Button>

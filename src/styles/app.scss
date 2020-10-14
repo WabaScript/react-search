@@ -94,24 +94,13 @@ body {
       color: blue;
   }
   
-  .fas.fa-star {
-      color: gold;
+  .fa.fa-star.full::after {
+      color: blue;
       text-shadow: 0 0 1px #000
   }
 
   #fullMapView {
     margin-top: 15px;
   }
-  
-  .ais-Hits-item {
-    padding: 0px;
-  }
 
-  .ais-Hits-list {
-
-  }
-
-  .ais-Hits {
-    
-  }
   

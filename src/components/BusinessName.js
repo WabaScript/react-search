@@ -36,9 +36,4 @@ const BusinessName = ({props}) => {
     );
 }
 
-function trackClick(event, key, handleShow) {
-    handleShow();
-
-}
-
 export default BusinessName;
