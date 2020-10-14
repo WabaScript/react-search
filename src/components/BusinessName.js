@@ -37,7 +37,7 @@ const BusinessName = ({props}) => {
 }
 
 function categorySplit(categories) {
-    return categories.map(x => (x + " "))
+    return categories ? categories.map(x => (x + " ")) : ""
 }
 
 export default BusinessName;

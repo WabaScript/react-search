@@ -35,14 +35,14 @@ function App() {
           <Col xs={2} sm={2} md={2} id="logoImg">
             <a href="/"><YelpLogo/></a> 
           </Col>
-          <Col xs={10} sm={10} md={10} className="d-none d-sm-none d-md-block" id="algoliaIcon">
-            <FaAlgolia size={"3em"} id="title"/>
+          <Col xs={{span: 1, offset: 10}} sm={{span: 1, offset: 10}} md={{span: 1, offset: 10}} className="d-none d-sm-block d-md-block">
+            <FaAlgolia size={"3em"} id="algoliaIcon"/>
           </Col>
         </Row>
           {/* Search */}
         <Row  id="searchRow">
           <Col xs={11} sm={11} md={11} lg={11}>
-            <Search />
+            <Search /> 
           </Col>
           <Col md={1} sm={1} xs={1}>
             <BiMap id="biMap" onClick={handleShow}/>
