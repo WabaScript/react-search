@@ -85,6 +85,7 @@ function getHoursFromObject(hours) {
     }
 }
 
+// All available icons
 function getIconMap() {
     let icons = {};
     const attributeKeys = [
@@ -106,7 +107,7 @@ function getIconMap() {
 
     return icons;
 }
-
+// Individual icons for Hit
 function getIconList(attributes) {
     if (!attributes) {
         return []

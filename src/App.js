@@ -36,7 +36,9 @@ function App() {
             <a href="/"><YelpLogo/></a> 
           </Col>
           <Col xs={{span: 1, offset: 10}} sm={{span: 1, offset: 10}} md={{span: 1, offset: 10}} className="d-none d-sm-block d-md-block">
-            <FaAlgolia size={"3em"} id="algoliaIcon"/>
+            <a target="_blank" href={'https://www.algolia.com'} rel="noopener noreferrer">
+              <FaAlgolia size={"3em"} id="algoliaIcon"/>
+            </a>
           </Col>
         </Row>
           {/* Search */}

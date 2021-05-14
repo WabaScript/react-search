@@ -48,7 +48,7 @@ const Map = ({ props }) => {
             <a target="_blank" href={`https://www.yelp.com/biz/${business_id}`} rel="noopener noreferrer" >
             <Button variant="primary" onClick={() => {
               handleClose();
-              insights('clickedObjectIDsAfterSearch', {
+              insights('convertedObjectIDsAfterSearch', {
                   eventName: `Went to ${name}'s Yelp Business Page`
               })
             }}>
