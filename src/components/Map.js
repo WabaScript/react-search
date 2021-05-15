@@ -49,7 +49,7 @@ const Map = ({ props }) => {
             <Button variant="primary" onClick={() => {
               handleClose();
               insights('convertedObjectIDsAfterSearch', {
-                  eventName: `Went to ${name}'s Yelp Business Page`
+                  eventName: `Went to a Yelp Business Page`
               })
             }}>
               See more about {name} on Yelp!
